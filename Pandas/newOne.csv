@@ -1,0 +1,19 @@
+id,erp http error code,ezcloud http error code,ezcloud custom error code,ezcloud error message,query id,dependent id,column id,priority,fieldname
+1,404,503,VLD-INV-440,Invoice Number Already exists,1,,1,1,invoiceNumber
+2,404,503,VLD-PO-450,"You are using encumbrance accounting in your ERP, and the invoice date entered is beyond the open encumbrance period",2,,2,1,invoiceDate
+3,404,503,VLD-PO-460,Accounting date (ACCOUNTING_DATE) is not in an open period.,2,2.0,3,2,invoiceDate
+4,404,503,VLD-PO-470,Entered Currency Code is not Valid,3,,2,1,invoiceCurrency
+5,404,503,VLD-PO-480,Entered Currency Code not Active,3,4.0,4,2,invoiceCurrency
+6,404,503,VLD-PO-490,Invalid PO Number,4,,2,1,orderNumber
+7,404,503,VLD-PO-500,Org Id does not match for given PO,4,6.0,5,2,orgId
+8,404,503,VLD-PO-510,The PO Currency and Invoice Currency do not match for given PO,4,6.0,6,2,invoiceCurrency
+9,404,503,VLD-PO-520,"The PO number entered exists in your ERP, but is inactive.",5,10.0,2,1,orderNumber
+10,404,503,VLD-PO-530,"The PO number entered is valid, but is not valid against the entered supplier.",6,6.0,2,1,supplierName
+11,404,503,VLD-SUPP-540,The supplier site entered is not enabled as a pay site in the ERP,6,10.0,7,2,supplierName
+12,404,503,VLD-PO-540,Payment Terms does not exist,7,,2,1,paymentTerms
+13,404,503,VLD-PO-550,InvoiceLine Number does not match the Po Lines Number,8,10.0,8,1,invoiceLineNumber
+14,404,503,VLD-PO-560,InvoiceLine Amount does not match the Po Lines Amount,8,10.0,9,2,invoiceLineNumber
+15,404,503,VLD-PO-570,Invoice Description does not match with PO description,8,10.0,10,2,invoiceLineNumber
+16,404,503,VLD-PO-580,Invoice Base Unit Of Measure(UOM) does not match the Po Line UOM,8,10.0,11,2,invoiceLineNumber
+17,404,503,VLD-PO-590,Invoice Unit Price does not match PO Unit Price,8,10.0,12,2,invoiceLineNumber
+18,404,503,VLD-SUPP-550,Supplier name does not exist,9,,2,1,supplierName
